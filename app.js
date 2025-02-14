@@ -50,3 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fadeElements.forEach((el) => observer.observe(el));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona todos os vídeos dos projetos
+  const projectVideos = document.querySelectorAll('.project-videobox video');
+  
+  projectVideos.forEach(video => {
+    // Força a carga do vídeo
+    video.load();
+    
+    // Adiciona um handler de erro
+    video.addEventListener('error', function(e) {
+      console.error('Erro no vídeo:', e);
+      console.log('Fonte do vídeo:', video.currentSrc);
+    });
+    
+    // Tenta iniciar o vídeo
+    video.play().catch(function(error) {
+      console.log("Erro ao reproduzir:", error);
+    });
+  });
+});
