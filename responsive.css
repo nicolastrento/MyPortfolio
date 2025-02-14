@@ -48,19 +48,25 @@
     bottom: 25%;
   }
 
-  .card video {
-    height: 70%;
-    width: 450px;
-    margin-top: 1%;
-  }
-
   .my-projects {
     margin-bottom: 300px;
   }
 
+  .hero-video-box video {
+    width: 100%;
+    height: auto;
+    width: 250px;
+  }
+
+  .card video {
+    width: 100vw;
+  }
+
   .project-videobox video {
-    width: 350px;
-    margin-left: -50px;
+    justify-content: center;
+    width: 80vw;
+    height: auto;
+    margin-right: 70px;
   }
 
   .project-info {
@@ -277,6 +283,10 @@
 
   .card p {
     bottom: 5px;
+  }
+
+  .project-videobox {
+    mix-blend-mode: exclusion;
   }
 
   .list {
