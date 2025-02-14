@@ -62,11 +62,17 @@
     width: 100vw;
   }
 
+  .project-videobox {
+    min-width: 300px;
+    right: 50px;
+    overflow: hidden;
+  }
+  
   .project-videobox video {
-    justify-content: center;
-    width: 80vw;
-    height: auto;
-    margin-right: 70px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Importante para mobile */
   }
 
   .project-info {
@@ -162,13 +168,6 @@
       font-size: 16px;
       width: 400px;
     }
-  }
-
-  .hero-video-box {
-    position: absolute;
-    top: 1%;
-    right: 18%;
-    height: 200px;
   }
 
   .scroll-down {
@@ -321,6 +320,10 @@
 
   .list {
     margin-top: 40px;
+  }
+
+  .social-box {
+    margin-top: 100px;
   }
 
   .contact-box {

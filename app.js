@@ -50,24 +50,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fadeElements.forEach((el) => observer.observe(el));
 });
-
-/* Aplicação para se caso o video não rodar */
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Função para forçar o play em todos os vídeos
-  function playVideos() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-      video.play().catch(function(error) {
-        console.log("Play failed:", error);
-      });
-    });
-  }
-
-  // Tenta reproduzir os vídeos quando a página carrega
-  playVideos();
-
-  // Tenta reproduzir novamente em interação do usuário
-  document.addEventListener('click', playVideos);
-  document.addEventListener('touchstart', playVideos);
-});
