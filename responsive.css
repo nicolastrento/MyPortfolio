@@ -1,6 +1,6 @@
 
+/* Notebook (max-width: 1160px) */
 @media screen and (max-width: 1160px) {
-
   header {
     gap: 150px;
   }
@@ -13,18 +13,19 @@
     font-size: 40px;
     width: 400px;
     line-height: 40px;
+  }
 
-    p {
-      width: 300px;
-    }
+  .hero-info p {
+    width: 300px;
   }
 
   .hero-video-box {
     right: 0;
+  }
 
-    video {
-      height: 500px;
-    }
+  .hero-video-box video {
+    width: 250px;
+    height: auto;
   }
 
   .section-tittle {
@@ -48,18 +49,12 @@
     bottom: 25%;
   }
 
-  .my-projects {
-    margin-bottom: 300px;
-  }
-
-  .hero-video-box video {
-    width: 100%;
-    height: auto;
-    width: 250px;
-  }
-
   .card video {
     width: 100vw;
+  }
+
+  .my-projects {
+    margin-bottom: 300px;
   }
 
   .project-videobox {
@@ -67,12 +62,12 @@
     right: 50px;
     overflow: hidden;
   }
-  
+
   .project-videobox video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; /* Importante para mobile */
+    display: block;
   }
 
   .project-info {
@@ -93,36 +88,27 @@
     min-width: 0;
   }
 
-  .skills-box .coder{
+  .skills-box .coder {
     position: absolute;
     right: 5%;
     width: 270px;
   }
 
-  footer h1{
+  footer h1 {
     font-size: 20px;
   }
+
 }
 
+/* Mobile (max-width: 760px) */
 @media screen and (max-width: 760px) {
-
+  /* Configurações de vídeo */
   video {
     width: 100% !important;
     height: auto !important;
     object-fit: cover !important;
     background-color: transparent;
     z-index: 1;
-  }
-  
-  .hero-video-box video,
-  .project-videobox video {
-    position: relative;
-    display: block;
-    min-width: 300px;
-  }
-
-  .hero-video-box {
-    width: 300px;
   }
   
   .back-video {
@@ -135,43 +121,88 @@
     object-fit: cover;
   }
 
+  /* Header */
   header {
     position: fixed;
     height: 50px;
-  }    
-
-  header ul {
-    display: none;
-  }
-
-  header .box-icons {
-    display: none;
   }
 
   header h1 {
     font-size: 25px;
+    margin-left: 40px;
   }
 
+  header ul,
+  header .box-icons {
+    display: none;
+  }
+
+  /* Hero Section */
   .hero {
     flex-direction: column;
+    top: 50px;
+    position: relative;
+    padding-top: 40px;  /* Espaço para o vídeo */
   }
 
   .hero-info {
-    height: 20px;
-    width: 400px;
+    position: relative;
+    height: auto;       /* Removido height fixo */
+    width: 100%;
+    max-width: 400px;
+    margin-top: 300px;  /* Espaço para o vídeo acima */
+    z-index: 2;
+  }
 
-    h1 {
-      font-size: 30px;
-    }
+  .hero-video-box {
+    position: absolute;
+    top: 5px;         /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    margin: 0;
+    z-index: -1;
+  }
 
-    p {
-      font-size: 16px;
-      width: 400px;
-    }
+  .hero-video-box video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-info h1 {
+    font-size: 30px;
+    width: 350px;
+    margin-left: 15px;
+  }
+
+  .hero-info p {
+    font-size: 16px;
+    width: 350px;
+    margin-left: 15px;
+  }
+
+  .hero-info button {
+    margin-left: 15px;
+  }
+
+  .hero-info-tittle {
+    margin-top: 20px;   /* Reduzido para melhor espaçamento */
+    margin-left: 15px;
+  }
+
+  .hero-video-box {
+    margin-top: -40px;
   }
 
   .scroll-down {
-    bottom: 8%;
+    bottom: 25px;
+  }
+
+  /* Cards */
+  .section-tittle {
+    margin-top: 250px;
   }
 
   .card {
@@ -179,12 +210,12 @@
   }
 
   .card h1 {
-    width: 150px;
-    bottom: 200px;
+    width: 155px;
+    bottom: 160px;
   }
 
   .card p {
-    bottom: 5%;
+    bottom: 5px;
     font-size: 10px;
   }
 
@@ -192,6 +223,7 @@
     width: 200px;
   }
 
+  /* Projects Section */
   .my-projects {
     margin-top: 200px;
     margin-bottom: 150px;
@@ -199,6 +231,7 @@
 
   .project-videobox {
     width: 200px;
+    mix-blend-mode: exclusion;
   }
 
   .project-card {
@@ -219,6 +252,7 @@
     width: 300px;
   }
 
+  /* Skills Section */
   .designer {
     top: 15%;
     left: 18%;
@@ -229,7 +263,7 @@
     left: 18%;
   }
 
-  .skills-box h1{
+  .skills-box h1 {
     margin-bottom: 0;
     margin-top: 70px;
   }
@@ -242,6 +276,11 @@
     width: 60%;
   }
 
+  .list {
+    margin-top: 40px;
+  }
+
+  /* Contact Section */
   .contact-section {
     flex-direction: column;
     margin-top: 80px;
@@ -258,79 +297,20 @@
     left: 20%;
   }
 
-  footer h1 {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-
-  header .left h1 {
-    margin-left: 40px;
-    font-size: 34px;
-  }
-
-  .hero {
-    top: 50px;
-
-    & h1 {
-      width: 350px;
-      margin-left: 15px;
-    }
-
-    & p {
-      width: 350px;
-      margin-left: 15px;
-    }
-
-    & button {
-      margin-left: 15px;
-    }
-  }
-
-  .hero-info-tittle {
-    margin-top: 60px;
-    margin-left: 15px;
-  }
-
-  .hero-video-box {
-    margin-top: -40px;
-  }
-
-  .scroll-down {
-    bottom: -150px;
-  }
-
-  .section-tittle {
-    margin-top: 250px;
-  }
-
-  .card h1 {
-    bottom: 160px;
-    width: 155px;
-  }
-
-  .card p {
-    bottom: 5px;
-  }
-
-  .project-videobox {
-    mix-blend-mode: exclusion;
-  }
-
-  .list {
-    margin-top: 40px;
-  }
-
   .social-box {
     margin-top: 100px;
   }
 
   .contact-box {
     width: 350px;
+  }
 
-    & p {
-      width: 330px;
-    }
+  .contact-box p {
+    width: 330px;
+  }
+
+  /* Footer */
+  footer h1 {
+    font-size: 17px;
   }
 }
