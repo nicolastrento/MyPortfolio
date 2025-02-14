@@ -99,6 +99,36 @@
 }
 
 @media screen and (max-width: 760px) {
+
+  video {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    background-color: transparent;
+    z-index: 1;
+  }
+  
+  .hero-video-box video,
+  .project-videobox video {
+    position: relative;
+    display: block;
+    min-width: 300px;
+  }
+
+  .hero-video-box {
+    width: 300px;
+  }
+  
+  .back-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
   header {
     position: fixed;
     height: 50px;
@@ -146,7 +176,7 @@
   }
 
   .card {
-    padding: 80px;
+    padding: 55px;
   }
 
   .card h1 {
